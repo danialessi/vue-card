@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- axios  -->
-    <script src=“https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js”></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 
     <!-- vuejs  -->
-    <script src=“https://cdn.jsdelivr.net/npm/vue”></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
     
@@ -27,22 +27,23 @@
 
         <!-- MAIN  -->
         <main>
-            <section class="albums-background">
-                <!-- albums  -->
-                <div class="albums-container">
-                    <div class="single-album">
-                        
-                        <div class="cover">
-                            <img src="" alt="">
-                        </div>
-                        <div class="title">NEW JERSEY</div>
-                        <div class="artist">Bon Jovi</div>
-                        <div class="year">1988</div>
-
+            
+            <!-- albums  -->
+            <div class="albums-container">
+                
+                <!-- single album  -->
+                <div v-for="element in albums" class="single-album">
+                    <div class="cover">
+                        <img :src="element.poster" alt="">
                     </div>
+                    <div class="title">{{ element.title }}</div>
+                    <div class="artist">{{ element.author }}</div>
+                    <div class="year">{{ element.year }}</div>
                 </div>
-                <!-- end albums  -->
-            </section>
+                <!-- end single album  -->
+
+            </div>
+            <!-- end albums  -->
 
         </main>
         <!-- END MAIN  -->

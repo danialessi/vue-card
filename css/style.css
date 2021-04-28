@@ -18,16 +18,43 @@
 
 
 /* MAIN  */
-.albums-background {
-    height: 100vh;
+main {
     background-color: #1e2e3c;
-    padding: 80px 50px;
 }
 
 /* albums  */
 .albums-container {
-    height: 800px;
-    background-color: aqua;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
+/* single album  */
+.single-album {
+    width: calc( ( 100% / 6 ) - 30px);
+    text-align: center;
+    background-color: #2e3b46;
+    padding: 20px;
+    margin: 0 10px;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: white;
+    margin: 15px 0;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.artist, .year {
+    font-size: 15px;
+    color: grey;
+}
+
+.cover img {
+    width: 100%
+}
+/* end single album  */
 /* end albums  */
 /* END MAIN  */
