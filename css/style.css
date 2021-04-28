@@ -4,3 +4,30 @@
     box-sizing: border-box;
 }
 
+/* HEADER  */
+.logo-container {
+    padding: 15px;
+    background-color: #2e3b46;
+}
+
+.logo-container img {
+    width: 40px;
+}
+
+/* END HEADER  */
+
+
+/* MAIN  */
+.albums-background {
+    height: 100vh;
+    background-color: #1e2e3c;
+    padding: 80px 50px;
+}
+
+/* albums  */
+.albums-container {
+    height: 800px;
+    background-color: aqua;
+}
+/* end albums  */
+/* END MAIN  */
