@@ -17,7 +17,11 @@ var app = new Vue (
                     this.albums = result.response;
 
                     this.albums.forEach(element => {
-                        let genre = element.genre
+
+                        // se l'elemento non è incluso nell'array pushalo 
+                        if (!this.genres.includes(element.genre)) {
+                            this.genres.push(element.genre);
+                        }
                         
                     });
                 });   

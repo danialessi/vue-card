@@ -34,7 +34,7 @@
             <div class="select">
                 <label for="genre">Seleziona genere:</label>
                 <select v-model="selected" id="genre">
-                    <option value=""></option>
+                    <option v-for="genre in genres" :value="genre">{{ genre }}</option>
                 </select>
             </div>
             <!-- end select genre -->
