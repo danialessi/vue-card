@@ -2,11 +2,12 @@ var app = new Vue (
     {
         el:"#root",
         data: {
-            albums: []
+            albums: [],
+            genres: [],
+            selected: ''
         },
 
         methods: {
-
         },
         mounted() {
             axios
@@ -14,6 +15,11 @@ var app = new Vue (
                 .then((response) => {
                     const result = response.data;
                     this.albums = result.response;
+
+                    this.albums.forEach(element => {
+                        let genre = element.genre
+                        
+                    });
                 });   
         }
     }
