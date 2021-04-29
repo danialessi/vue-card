@@ -34,6 +34,7 @@
             <div class="select">
                 <label for="genre">Seleziona genere:</label>
                 <select v-model="selected" id="genre">
+                    <option value="">All</option>
                     <option v-for="genre in genres" :value="genre">{{ genre }}</option>
                 </select>
             </div>
@@ -43,7 +44,7 @@
             <div class="albums-container">
                 
                 <!-- single album  -->
-                <div v-for="element in albums" class="single-album">
+                <div v-for="element in albums" v-if="selected.length == 0 || selected == element.genre" class="single-album">
                     <div class="cover">
                         <img :src="element.poster" alt="">
                     </div>

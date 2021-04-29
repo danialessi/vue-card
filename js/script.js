@@ -16,6 +16,12 @@ var app = new Vue (
                     const result = response.data;
                     this.albums = result.response;
 
+                    // ordinamento per anno 
+                    this.albums.sort((a, b) => {
+                        return a.year - b.year
+                    });
+
+                    // select per generi 
                     this.albums.forEach(element => {
 
                         // se l'elemento non è incluso nell'array pushalo 
